@@ -1,0 +1,72 @@
+<!DOCTYPE
+
+
+ html>
+<html lang="en">
+<link rel="Shortcut icon" type="image/png" href="assets/favicon.png"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="login-container">
+        <div class="circle circle-one"></div>
+        <div class="form-container">
+          <img
+            src="./assets/illustration.png"
+            alt="illustration"
+            class="illustration"
+          />
+          <h1 class="opacity">OTP</h1>
+          <form>
+            <input type="number" placeholder="OTP" />
+            <button class="opacity">SUBMIT</button>
+          </form>
+           <center>
+            <li>Check your Email for OTP</li>
+            <li> OTP Expires in 👇👇
+          <div id="timer">5:00</div>
+  <script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+ 
+            if(mins > 1){
+ 
+               // countdown(mins-1);   never reach “00″
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+ 
+            }
+        }
+    }
+    tick();
+}
+ 
+countdown(5);
+ 
+</script>
+          <div class="register-forget opacity">
+            <a href="login.html">LOGIN</a>
+            <a href="index.html">REGISTER</a>
+          </div>
+        </div>
+        <div class="circle circle-two"></div>
+      </div>
+      <div class="theme-btn-container"></div>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>
